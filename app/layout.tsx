@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Market3w - El futuro de la web 3 se construye desde web 2",
   description:
-    "Fast, affordable, and seamless bridging between Cosmos, Ethereum, and beyond in one connection, and one click.",
+    "Innovación tecnológica para emprendedores y pequeños negocios con soluciones web avanzadas e inteligencia artificial.",
     generator: 'v0.dev'
 }
 
