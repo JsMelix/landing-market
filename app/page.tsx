@@ -40,7 +40,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="inline-block px-4 py-1 bg-gray-800/80 rounded-full text-sm font-medium mb-6"
             >
-              NEW
+              {/* Removing the "NEW" text */}
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -122,21 +122,13 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <Zap className="w-10 h-10 text-orange-500" />,
-                  title: "Fast & Secure",
-                  description:
-                    "Lightning-fast transactions with industry-leading security protocols to protect your assets.",
+                  image: "/ods.png"
                 },
                 {
-                  icon: <Globe className="w-10 h-10 text-purple-500" />,
-                  title: "Interoperable",
-                  description: "Seamlessly connect and transact across multiple blockchains in the Cosmos ecosystem.",
+                  image: "/ods1.jpg"
                 },
                 {
-                  icon: <Shield className="w-10 h-10 text-blue-500" />,
-                  title: "Sovereign",
-                  description:
-                    "Each blockchain maintains its sovereignty while benefiting from interchain connectivity.",
+                  image: "/img.png"
                 },
               ].map((feature, index) => (
                 <motion.div
@@ -147,9 +139,16 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300"
                 >
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
+                  <div className="flex justify-center">
+                    <div className="w-64 h-64 relative">
+                      <img 
+                        src={feature.image} 
+                        alt="ODS Icon" 
+                        className="w-full h-full object-contain"
+                      />
+                      <div className="absolute inset-0 bg-blue-500/10 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -376,18 +375,18 @@ export default function Home() {
                 transition={{ duration: 0.7 }}
               >
                 <div className="inline-block px-4 py-1 bg-gray-800/80 rounded-full text-sm font-medium mb-6">
-                  FEATURED
+                  DESTACADO
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">IBC Eureka Bridge</h2>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">Agentes de IA</h2>
                 <p className="text-xl text-gray-300 mb-6">
-                  The next generation of interchain technology connecting Cosmos to Ethereum and beyond.
+                  Transformando la experiencia de usuario en blockchain y tiendas web 2 con inteligencia artificial avanzada.
                 </p>
                 <ul className="space-y-4 mb-8">
                   {[
-                    "Fast and affordable bridging",
-                    "Seamless one-click transfers",
-                    "Enhanced security protocols",
-                    "Support for multiple assets",
+                    "Asistentes virtuales personalizados",
+                    "Automatización de procesos comerciales",
+                    "Análisis predictivo de comportamiento",
+                    "Integración con sistemas blockchain",
                   ].map((item, index) => (
                     <motion.li
                       key={index}
@@ -414,7 +413,7 @@ export default function Home() {
                 </ul>
                 <Button variant="cosmos" size="lg" asChild>
                   <Link href="#learn-more">
-                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                    Conocer Más <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
               </motion.div>
@@ -428,7 +427,13 @@ export default function Home() {
               >
                 <div className="aspect-square max-w-md mx-auto relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-orange-500/20 rounded-full blur-3xl"></div>
-                  <div className="absolute inset-10 border-2 border-gray-700/50 rounded-full"></div>
+                  <div className="absolute inset-10 border-2 border-gray-700/50 rounded-full overflow-hidden">
+                    <img 
+                      src="/ods3.jpg" 
+                      alt="ODS 3" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
                       animate={{
@@ -465,9 +470,7 @@ export default function Home() {
                         />
                       </div>
                     </motion.div>
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-500 to-purple-500 flex items-center justify-center z-10">
-                      <span className="text-2xl font-bold">IBC</span>
-                    </div>
+                    {/* IBC circle removed */}
                   </div>
                 </div>
               </motion.div>
@@ -475,30 +478,228 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black z-0"></div>
+        {/* ODS, Blockchain and AI Section */}
+        <section id="sustainability" className="py-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-green-950/5 to-black z-0"></div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="max-w-4xl mx-auto text-center"
+              className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join the Cosmos ecosystem today and experience the future of interchain technology.
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Impacto Sostenible</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Combinamos blockchain e inteligencia artificial para impulsar los Objetivos de Desarrollo Sostenible
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="cosmos" size="lg" asChild>
-                  <Link href="#transfer">Make a Transfer</Link>
-                </Button>
-                <Button variant="cosmosOutline" size="lg" asChild>
-                  <Link href="#docs">Read the Docs</Link>
-                </Button>
-              </div>
             </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-green-800 hover:border-green-700 transition-all duration-300"
+              >
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 bg-green-900/30 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-center">ODS</h3>
+                <p className="text-gray-400">
+                  Contribuimos a los Objetivos de Desarrollo Sostenible mediante soluciones tecnológicas que promueven la transparencia, reducen la desigualdad y fomentan alianzas estratégicas.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-blue-800 hover:border-blue-700 transition-all duration-300"
+              >
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 bg-blue-900/30 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-center">Blockchain</h3>
+                <p className="text-gray-400">
+                  Nuestra tecnología blockchain garantiza trazabilidad, seguridad y transparencia en cada transacción, permitiendo a las mypes participar en ecosistemas digitales confiables.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-purple-800 hover:border-purple-700 transition-all duration-300"
+              >
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-center">Inteligencia Artificial</h3>
+                <p className="text-gray-400">
+                  Potenciamos a los emprendimientos pequeños negocios con herramientas de IA que optimizan procesos, personalizan experiencias y generan insights valiosos para la toma de decisiones estratégicas.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Presentation Cards Section */}
+        <section id="terminal" className="py-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/5 to-black z-0"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Terminal#22-64</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Soluciones tecnológicas para cada etapa de tu negocio
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-emerald-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-emerald-600/80 backdrop-blur-sm p-4 text-center border-b border-emerald-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Desarrollo Web</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-24 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <div className="absolute inset-0 bg-emerald-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
+                  <p className="text-sm mb-4 font-medium text-white">Creamos sitios web modernos y responsivos que representan la identidad de tu negocio y conectan con tus clientes.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                      <span>Diseño UX/UI personalizado</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                      <span>Optimización SEO</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                      <span>Integración con APIs</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Card 2 */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-amber-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-amber-600/80 backdrop-blur-sm p-4 text-center border-b border-amber-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Aplicaciones Móviles</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-24 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                      <div className="absolute inset-0 bg-amber-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
+                  <p className="text-sm mb-4 font-medium text-white">Desarrollamos aplicaciones nativas y multiplataforma que llevan tu negocio al bolsillo de tus clientes.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
+                      <span>iOS y Android</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
+                      <span>Notificaciones push</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
+                      <span>Integración con pagos</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Card 3 */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-rose-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-rose-600/80 backdrop-blur-sm p-4 text-center border-b border-rose-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Blockchain & Web3</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-24 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                      </svg>
+                      <div className="absolute inset-0 bg-rose-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
+                  <p className="text-sm mb-4 font-medium text-white">Implementamos soluciones blockchain que transforman tu modelo de negocio con transparencia y seguridad.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-rose-400 rounded-full mr-2"></span>
+                      <span>Smart contracts</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-rose-400 rounded-full mr-2"></span>
+                      <span>Tokenización de activos</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-rose-400 rounded-full mr-2"></span>
+                      <span>DApps personalizadas</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
