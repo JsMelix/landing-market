@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Cosmos Network - El futuro de la web 3 se construye desde web 2",
+  title: "Market3w - El futuro de la web 3 se construye desde web 2",
   description:
     "Fast, affordable, and seamless bridging between Cosmos, Ethereum, and beyond in one connection, and one click.",
     generator: 'v0.dev'
