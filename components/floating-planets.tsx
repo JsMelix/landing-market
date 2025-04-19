@@ -27,12 +27,12 @@ export function FloatingPlanets() {
           repeatType: "reverse",
           ease: "easeInOut",
         }}
-        className="absolute w-24 h-24 rounded-full bg-purple-900/80 backdrop-blur-sm flex items-center justify-center"
+        className="absolute w-24 h-24 flex items-center justify-center"
       >
         <span className="text-2xl font-bold">dYdX</span>
       </motion.div>
 
-      {/* M Planet */}
+      {/* Empre Planet */}
       <motion.div
         initial={{ x: "70vw", y: "40vh" }}
         animate={{
@@ -45,9 +45,13 @@ export function FloatingPlanets() {
           repeatType: "reverse",
           ease: "easeInOut",
         }}
-        className="absolute w-16 h-16 rounded-full bg-gray-800/80 backdrop-blur-sm flex items-center justify-center"
+        className="absolute w-16 h-16 flex items-center justify-center"
       >
-        <span className="text-orange-500 text-2xl">M</span>
+        <img 
+          src="/empre.jpg" 
+          alt="Empre" 
+          className="w-14 h-14 object-contain"
+        />
       </motion.div>
 
       {/* Babylon Planet */}
@@ -88,6 +92,28 @@ export function FloatingPlanets() {
         className="absolute w-20 h-20 rounded-full bg-blue-900/80 backdrop-blur-sm flex items-center justify-center"
       >
         <span className="text-blue-500 text-2xl">Ξ</span>
+      </motion.div>
+
+      {/* COM Planet */}
+      <motion.div
+        initial={{ x: "80vw", y: "20vh" }}
+        animate={{
+          x: ["80vw", "75vw", "85vw", "80vw"],
+          y: ["20vh", "25vh", "15vh", "20vh"],
+        }}
+        transition={{
+          duration: 30,
+          repeat: Number.POSITIVE_INFINITY,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+        className="absolute w-24 h-24 flex items-center justify-center"
+      >
+        <img 
+          src="/com.jpg" 
+          alt="COM" 
+          className="w-20 h-20 object-contain"
+        />
       </motion.div>
     </div>
   )

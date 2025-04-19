@@ -167,29 +167,184 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Cosmos Ecosystem</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">MembresIAs Disponibles</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join a thriving ecosystem of interconnected blockchains built for the future of decentralized
-                applications.
+                Seleccione el plan que mejor se adapte a sus necesidades de desarrollo.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {Array.from({ length: 8 }).map((_, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                  whileHover={{ y: -5 }}
-                  className="bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-800 flex items-center justify-center aspect-square"
-                >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-orange-500 flex items-center justify-center text-2xl font-bold">
-                    {String.fromCharCode(65 + index)}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {/* Silver */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-teal-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-teal-600/80 backdrop-blur-sm p-4 text-center border-b border-teal-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Silver</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-32 relative">
+                      <img 
+                        src="/rocket.jpg" 
+                        alt="Rocket" 
+                        className="w-full h-full object-contain"
+                      />
+                      <div className="absolute inset-0 bg-teal-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
+                  <p className="text-sm mb-4 font-medium text-white">Para quienes están iniciando en el ecosistema digital y desean explorar oportunidades.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-teal-400 rounded-full mr-2"></span>
+                      <span>Desarrollo básico</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-teal-400 rounded-full mr-2"></span>
+                      <span>Soporte inicial</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-teal-400 rounded-full mr-2"></span>
+                      <span>Personalización limitada</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Freeze */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-cyan-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-cyan-600/80 backdrop-blur-sm p-4 text-center border-b border-cyan-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Freeze</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-32 relative">
+                      <img 
+                        src="/rocket.jpg" 
+                        alt="Rocket" 
+                        className="w-full h-full object-contain"
+                      />
+                      <div className="absolute inset-0 bg-cyan-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
+                  <p className="text-sm mb-4 font-medium text-white">Para negocios que buscan ampliar su presencia, conectar con desarrolladores y fortalecer estrategias digitales.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                      <span>Desarrollo intermedio</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                      <span>Soporte extendido</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                      <span>Personalización avanzada</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Fire */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-blue-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-blue-600/80 backdrop-blur-sm p-4 text-center border-b border-blue-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Fire</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-32 relative">
+                      <img 
+                        src="/rocket.jpg" 
+                        alt="Rocket" 
+                        className="w-full h-full object-contain"
+                      />
+                      <div className="absolute inset-0 bg-blue-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
+                  <p className="text-sm mb-4 font-medium text-white">Dirigido a emprendimientos mypes que quieren innovar con blockchain, herramientas avanzadas.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                      <span>Desarrollo avanzado</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                      <span>Soporte premium</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                      <span>Integración blockchain</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Crack */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                whileHover={{ y: -5 }}
+                className="relative bg-black rounded-xl overflow-hidden border border-indigo-400"
+              >
+                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+                <div className="bg-indigo-600/80 backdrop-blur-sm p-4 text-center border-b border-indigo-400 relative z-10">
+                  <h3 className="text-xl font-bold text-white">Crack</h3>
+                </div>
+                <div className="p-6 relative z-10">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-32 relative">
+                      <img 
+                        src="/rocket.jpg" 
+                        alt="Rocket" 
+                        className="w-full h-full object-contain"
+                      />
+                      <div className="absolute inset-0 bg-indigo-500/20 rounded-lg blur-md -z-10"></div>
+                    </div>
+                  </div>
+                  <p className="text-sm mb-4 font-medium text-white">La membresía más completa, diseñada para acelerar el crecimiento digital y maximizar la integración tecnológica.</p>
+                  <div className="space-y-2 text-sm text-gray-200">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                      <span>Desarrollo completo</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                      <span>Soporte 24/7</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                      <span>Integración total</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
             <motion.div
@@ -200,8 +355,8 @@ export default function Home() {
               className="mt-12 text-center"
             >
               <Button variant="cosmos" size="lg" className="group" asChild>
-                <Link href="#explore">
-                  Explore Ecosystem{" "}
+                <Link href="#contact">
+                  Solicitar Presupuesto{" "}
                   <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
