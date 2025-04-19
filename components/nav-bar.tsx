@@ -40,28 +40,7 @@ export function NavBar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center hover:text-gray-300 transition">
-                Products <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-gray-900/90 backdrop-blur-md border-gray-800">
-                <DropdownMenuItem className="hover:bg-gray-800">
-                  <Link href="#ibc" className="flex w-full">
-                    IBC Protocol
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-gray-800">
-                  <Link href="#hub" className="flex w-full">
-                    Cosmos Hub
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-gray-800">
-                  <Link href="#sdk" className="flex w-full">
-                    Cosmos SDK
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Products dropdown removed */}
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center hover:text-gray-300 transition">
@@ -116,22 +95,7 @@ export function NavBar() {
           transition={{ duration: 0.3 }}
         >
           <div className="container mx-auto px-4 py-4 space-y-4">
-            <div className="border-b border-gray-800 pb-2">
-              <button className="flex items-center justify-between w-full py-2" onClick={() => {}}>
-                Products <ChevronDown className="h-4 w-4" />
-              </button>
-              <div className="pl-4 space-y-2 mt-2">
-                <Link href="#ibc" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  IBC Protocol
-                </Link>
-                <Link href="#hub" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Cosmos Hub
-                </Link>
-                <Link href="#sdk" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Cosmos SDK
-                </Link>
-              </div>
-            </div>
+            {/* Products section removed */}
 
             <div className="border-b border-gray-800 pb-2">
               <button className="flex items-center justify-between w-full py-2" onClick={() => {}}>
