@@ -73,15 +73,15 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Button variant="cosmos" size="lg" className="group relative overflow-hidden" asChild>
-                <Link href="#transfer">
-                  <span className="relative z-10">Make a Transfer</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-500 group-hover:opacity-0 transition-opacity duration-300"></span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <Link href="#ecosystem">
+                  <span className="relative z-10">Membresias</span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-500 group-hover:opacity-0 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </Link>
               </Button>
               <Button variant="cosmosOutline" size="lg" className="group" asChild>
                 <Link href="#expert">
-                  <span>Speak to an Expert</span>
+                  <span>Comunicate con Soporte</span>
                   <span className="absolute inset-0 bg-gray-700/0 group-hover:bg-gray-700/30 transition-colors duration-300 rounded-md"></span>
                 </Link>
               </Button>
@@ -113,9 +113,12 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Interchain Technology</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The Internet of Blockchains is powered by IBC, the Inter-Blockchain Communication protocol.
+                Somos una plataforma que conecta emprendimientos, pequeños negocios y desarrolladores, impulsando la inclusion financiera y la digitalización Sostenible.
+                <br /><br />
+                Visualizamos un mundo donde cada emprendimiento, pequeño negocio, Mype, sin importar su tamaño, 
+                pueda integrar las tecnologías emergentes para crecer, innovar, en un mercado global.
               </p>
             </motion.div>
 
@@ -238,7 +241,7 @@ export default function Home() {
                         alt="Rocket" 
                         className="w-full h-full object-contain"
                       />
-                      <div className="absolute inset-0 bg-cyan-500/20 rounded-lg blur-md -z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl"></div>
                     </div>
                   </div>
                   <p className="text-sm mb-4 font-medium text-white">Para negocios que buscan ampliar su presencia, conectar con desarrolladores y fortalecer estrategias digitales.</p>
@@ -355,7 +358,7 @@ export default function Home() {
             >
               <Button variant="cosmos" size="lg" className="group" asChild>
                 <Link href="#contact">
-                  Solicitar Presupuesto{" "}
+                Empieza tu membresía hoy{" "}
                   <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -559,149 +562,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Presentation Cards Section */}
-        <section id="terminal" className="py-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/5 to-black z-0"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Terminal#22-64</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Soluciones tecnológicas para cada etapa de tu negocio
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Card 1 */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                whileHover={{ y: -5 }}
-                className="relative bg-black rounded-xl overflow-hidden border border-emerald-400"
-              >
-                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
-                <div className="bg-emerald-600/80 backdrop-blur-sm p-4 text-center border-b border-emerald-400 relative z-10">
-                  <h3 className="text-xl font-bold text-white">Desarrollo Web</h3>
-                </div>
-                <div className="p-6 relative z-10">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 relative">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      <div className="absolute inset-0 bg-emerald-500/20 rounded-lg blur-md -z-10"></div>
-                    </div>
-                  </div>
-                  <p className="text-sm mb-4 font-medium text-white">Creamos sitios web modernos y responsivos que representan la identidad de tu negocio y conectan con tus clientes.</p>
-                  <div className="space-y-2 text-sm text-gray-200">
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                      <span>Diseño UX/UI personalizado</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                      <span>Optimización SEO</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                      <span>Integración con APIs</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Card 2 */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                whileHover={{ y: -5 }}
-                className="relative bg-black rounded-xl overflow-hidden border border-amber-400"
-              >
-                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
-                <div className="bg-amber-600/80 backdrop-blur-sm p-4 text-center border-b border-amber-400 relative z-10">
-                  <h3 className="text-xl font-bold text-white">Aplicaciones Móviles</h3>
-                </div>
-                <div className="p-6 relative z-10">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 relative">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
-                      <div className="absolute inset-0 bg-amber-500/20 rounded-lg blur-md -z-10"></div>
-                    </div>
-                  </div>
-                  <p className="text-sm mb-4 font-medium text-white">Desarrollamos aplicaciones nativas y multiplataforma que llevan tu negocio al bolsillo de tus clientes.</p>
-                  <div className="space-y-2 text-sm text-gray-200">
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
-                      <span>iOS y Android</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
-                      <span>Notificaciones push</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
-                      <span>Integración con pagos</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Card 3 */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                whileHover={{ y: -5 }}
-                className="relative bg-black rounded-xl overflow-hidden border border-rose-400"
-              >
-                <div className="absolute inset-0 bg-[url('/rocket-bg.png')] bg-cover bg-center opacity-40"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
-                <div className="bg-rose-600/80 backdrop-blur-sm p-4 text-center border-b border-rose-400 relative z-10">
-                  <h3 className="text-xl font-bold text-white">Blockchain & Web3</h3>
-                </div>
-                <div className="p-6 relative z-10">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 relative">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                      </svg>
-                      <div className="absolute inset-0 bg-rose-500/20 rounded-lg blur-md -z-10"></div>
-                    </div>
-                  </div>
-                  <p className="text-sm mb-4 font-medium text-white">Implementamos soluciones blockchain que transforman tu modelo de negocio con transparencia y seguridad.</p>
-                  <div className="space-y-2 text-sm text-gray-200">
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-rose-400 rounded-full mr-2"></span>
-                      <span>Smart contracts</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-rose-400 rounded-full mr-2"></span>
-                      <span>Tokenización de activos</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="w-2 h-2 bg-rose-400 rounded-full mr-2"></span>
-                      <span>DApps personalizadas</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        {/* Presentation Cards Section - REMOVED */}
+        {/* The entire section with id="terminal" has been removed */}
 
         {/* Footer */}
         <Footer />

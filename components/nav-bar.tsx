@@ -44,38 +44,34 @@ export function NavBar() {
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center hover:text-gray-300 transition">
-                Developers <ChevronDown className="ml-1 h-4 w-4" />
+                Desarrolladores <ChevronDown className="ml-1 h-4 w-4" /> {/* Changed text */}
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-gray-900/90 backdrop-blur-md border-gray-800">
-                <DropdownMenuItem className="hover:bg-gray-800">
-                  <Link href="#docs" className="flex w-full">
-                    Documentation
+                {/* Documentation link removed */}
+                {/* Tutorials link removed */}
+                {/* GitHub link removed */}
+                <DropdownMenuItem className="hover:bg-gray-800"> {/* Added Emprendimientos */}
+                  <Link href="#emprendimientos" className="flex w-full">
+                    Emprendimientos
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-gray-800">
-                  <Link href="#tutorials" className="flex w-full">
-                    Tutorials
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="hover:bg-gray-800">
-                  <Link href="#github" className="flex w-full">
-                    GitHub
+                <DropdownMenuItem className="hover:bg-gray-800"> {/* Added Comunidad */}
+                  <Link href="#community" className="flex w-full">
+                    Comunidad
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             <Link href="#resources" className="hover:text-gray-300 transition">
-              Resources
+              Recursos {/* Changed text */}
             </Link>
 
             <Link href="#contact" className="hover:text-gray-300 transition">
-              Contact
+              Contacto {/* Changed text */}
             </Link>
 
-            <Link href="#bridge" className="text-sm flex items-center gap-1 text-gray-300 hover:text-white transition">
-              New to Cosmos: Bridge with IBC Eureka <ArrowRight className="h-3 w-3" />
-            </Link>
+            {/* Removed "New to Cosmos: Bridge with IBC Eureka" link */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,42 +95,34 @@ export function NavBar() {
 
             <div className="border-b border-gray-800 pb-2">
               <button className="flex items-center justify-between w-full py-2" onClick={() => {}}>
-                Developers <ChevronDown className="h-4 w-4" />
+                Desarrolladores <ChevronDown className="h-4 w-4" /> {/* Changed text */}
               </button>
               <div className="pl-4 space-y-2 mt-2">
-                <Link href="#docs" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Documentation
+                {/* Documentation link removed */}
+                {/* Tutorials link removed */}
+                {/* GitHub link removed */}
+                <Link href="#emprendimientos" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}> {/* Added Emprendimientos */}
+                  Emprendimientos
                 </Link>
-                <Link href="#tutorials" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  Tutorials
-                </Link>
-                <Link href="#github" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  GitHub
+                <Link href="#community" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}> {/* Added Comunidad */}
+                  Comunidad
                 </Link>
               </div>
             </div>
 
             <div className="border-b border-gray-800 pb-2">
               <Link href="#resources" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                Resources
+                Recursos {/* Changed text */}
               </Link>
             </div>
 
             <div className="border-b border-gray-800 pb-2">
               <Link href="#contact" className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                Contact
+                Contacto {/* Changed text */}
               </Link>
             </div>
 
-            <div className="pt-2">
-              <Link
-                href="#bridge"
-                className="flex items-center gap-1 text-orange-500"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Bridge with IBC Eureka <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            {/* Removed "Bridge with IBC Eureka" link section */}
           </div>
         </motion.div>
       )}
