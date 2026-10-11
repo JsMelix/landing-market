@@ -73,7 +73,7 @@ export function Footer() {
           {/* Products section removed */}
 
           <div>
-            <h4 className="font-bold text-lg mb-4">Desarrolladores</h4> {/* Changed heading to Spanish */}
+            <h4 className="font-bold text-lg mb-4">Talento 40+</h4> {/* Changed heading to Spanish */}
             <ul className="space-y-2">
               {/* Documentation link removed */}
               {/* Tutorials link removed */}
