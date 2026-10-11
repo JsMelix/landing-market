@@ -44,7 +44,7 @@ export function NavBar() {
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center hover:text-gray-300 transition">
-                Desarrolladores <ChevronDown className="ml-1 h-4 w-4" /> {/* Changed text */}
+                Talento  40+ <ChevronDown className="ml-1 h-4 w-4" /> {/* Changed text */}
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-gray-900/90 backdrop-blur-md border-gray-800">
                 {/* Documentation link removed */}

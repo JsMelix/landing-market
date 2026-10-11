@@ -244,7 +244,7 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl"></div>
                     </div>
                   </div>
-                  <p className="text-sm mb-4 font-medium text-white">Para negocios que buscan ampliar su presencia, conectar con desarrolladores y fortalecer estrategias digitales.</p>
+                  <p className="text-sm mb-4 font-medium text-white">Para negocios que buscan ampliar su presencia  digital, conectar con  la  y fortalecer estrategias digitales.</p>
                   <div className="space-y-2 text-sm text-gray-200">
                     <div className="flex items-center">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
@@ -380,7 +380,7 @@ export default function Home() {
                 <div className="inline-block px-4 py-1 bg-gray-800/80 rounded-full text-sm font-medium mb-6">
                   DESTACADO
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">Agentes de IA</h2>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">Automatización</h2>
                 <p className="text-xl text-gray-300 mb-6">
                   Transformando la experiencia de usuario en blockchain y tiendas web 2 con inteligencia artificial avanzada.
                 </p>
