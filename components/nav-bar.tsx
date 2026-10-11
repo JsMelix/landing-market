@@ -95,7 +95,7 @@ export function NavBar() {
 
             <div className="border-b border-gray-800 pb-2">
               <button className="flex items-center justify-between w-full py-2" onClick={() => {}}>
-                Desarrolladores <ChevronDown className="h-4 w-4" /> {/* Changed text */}
+                Talento 40+ <ChevronDown className="h-4 w-4" /> {/* Changed text */}
               </button>
               <div className="pl-4 space-y-2 mt-2">
                 {/* Documentation link removed */}
