@@ -115,7 +115,7 @@ export default function Home() {
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Somos una plataforma que conecta emprendimientos, pequeños negocios y desarrolladores, impulsando la inclusion financiera y la digitalización Sostenible.
+                Somos una plataforma que conecta emprendimientos, pequeños negocios y talento 40+, impulsando la inclusion financiera y la digitalización Sostenible.
                 <br /><br />
                 Visualizamos un mundo donde cada emprendimiento, pequeño negocio, Mype, sin importar su tamaño, 
                 pueda integrar las tecnologías emergentes para crecer, innovar, en un mercado global.
