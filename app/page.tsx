@@ -2,13 +2,14 @@
 
 import Link from "next/link"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, ChevronDown, ExternalLink, Globe, Layers, Shield, Zap } from "lucide-react"
+import { ArrowRight, ChevronDown, ExternalLink, Globe, Layers, Shield, Zap, Users, Briefcase, Rocket } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { FloatingPlanets } from "@/components/floating-planets"
 import { ParticleBackground } from "@/components/particle-background"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
+import { MatchingAgent } from "@/components/matching-agent"
 
 export default function Home() {
   const { scrollY } = useScroll()
@@ -562,8 +563,95 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Presentation Cards Section - REMOVED */}
-        {/* The entire section with id="terminal" has been removed */}
+        {/* Demo Matching Section */}
+        <section id="demo" className="py-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-indigo-950/10 to-black z-0"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="text-center mb-12"
+            >
+              <div className="inline-block px-4 py-1 bg-indigo-900/50 border border-indigo-700/60 rounded-full text-sm font-medium text-indigo-300 mb-4">
+                DEMO EN VIVO
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Agente de Matching Market3w
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Nuestro agente conecta talento, emprendimientos y proyectos en segundos. Pruébalo ahora: cuéntanos quién eres y descubre tus mejores matches.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Explanation */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="space-y-6"
+              >
+                <div className="space-y-5">
+                  {[
+                    {
+                      icon: <Users className="w-5 h-5 text-teal-400" />,
+                      color: "border-teal-800 bg-teal-950/30",
+                      title: "Talento",
+                      desc: "Profesionales y freelancers que buscan proyectos o emprendimientos donde aportar sus habilidades.",
+                    },
+                    {
+                      icon: <Briefcase className="w-5 h-5 text-orange-400" />,
+                      color: "border-orange-800 bg-orange-950/30",
+                      title: "Emprendimientos",
+                      desc: "Mypes y startups que necesitan talento especializado o alianzas con otros proyectos afines.",
+                    },
+                    {
+                      icon: <Rocket className="w-5 h-5 text-indigo-400" />,
+                      color: "border-indigo-800 bg-indigo-950/30",
+                      title: "Proyectos",
+                      desc: "Ideas e iniciativas en blockchain, IA, impacto social y Web3 que buscan co-fundadores y colaboradores.",
+                    },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -15 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: i * 0.12 }}
+                      className={`flex gap-4 p-4 rounded-xl border ${item.color}`}
+                    >
+                      <div className="mt-0.5">{item.icon}</div>
+                      <div>
+                        <p className="font-semibold text-white mb-1">{item.title}</p>
+                        <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-5">
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    El agente analiza tu perfil con IA y encuentra los mejores matches en nuestra comunidad.
+                    En la plataforma completa, el matching es en tiempo real con miles de miembros verificados.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Chatbot */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <MatchingAgent />
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <Footer />
